@@ -101,8 +101,6 @@ namespace Neophron.Network
 
         public string Recv()
         {
-            // Отправка запроса к серверу
-
             DataRequest request = new DataRequest("null", 0, "RECV_DATA");
 
             string json = JsonConvert.SerializeObject(request);
@@ -111,9 +109,7 @@ namespace Neophron.Network
             sslStream.Write(jsonBytes, 0, jsonBytes.Length);
             sslStream.Flush();
             Thread.Sleep(100);
-
-            // Прием файла
-
+            
             byte[] _jsonBytes = new byte[2048];
             sslStream.Read(_jsonBytes, 0, _jsonBytes.Length);
             string _json = Encoding.UTF8.GetString(_jsonBytes);
