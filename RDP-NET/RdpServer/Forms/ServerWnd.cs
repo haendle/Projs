@@ -48,7 +48,7 @@ namespace RdpServer
         private SslServer _server;
         private SmtpServer _smtpServer;
         private StunServer _stunServer;
-        INatDevice _device;
+        private INatDevice _device;
 
         private IRDPSRAPIVirtualChannel _virtualChannel;
         private RDPSRAPIInvitation _invitation;
