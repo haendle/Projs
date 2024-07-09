@@ -90,7 +90,7 @@ namespace RdpClient.Sockets
                 return true;
             }
 
-            return true;
+            return false;
         }
     }
 }
