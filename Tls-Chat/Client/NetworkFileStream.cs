@@ -13,6 +13,11 @@ namespace Client
         private IPEndPoint RemoteEndPoint;
         private SslStream SslStream;
 
+        public string fileName;
+        public string filePath;
+        public string sender;
+        public long recvBytes;
+
         private int ExternalPort;
 
         private IStaticPortMappingCollection PortMapping;
@@ -86,11 +91,6 @@ namespace Client
 
             return Path.GetFileName(path);
         }
-
-        public string fileName;
-        public string filePath;
-        public string sender;
-        public long recvBytes;
 
         public string Recv(string path)
         {
